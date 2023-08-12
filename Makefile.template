@@ -1,0 +1,10 @@
+# Makefile.template
+
+all: $(PROBLEMS)
+
+$(PROBLEMS):
+	g++ $@.cc -o $@ 
+	./$@
+
+clean:
+	rm -f $(PROBLEMS)
