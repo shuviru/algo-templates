@@ -1,0 +1,8 @@
+*/
+**
+!.gitignore
+!Makefile
+!docker-compose.yml
+!Dockerfile
+!Makefile.template
+!template.cc

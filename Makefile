@@ -16,9 +16,7 @@ ifndef DIR
 endif
 	mkdir -p $(DIR)
 	for problem in $(PROBLEMS); do \
-		cp template.cc $(DIRNAME)/$$problem.cc; \
+		cp template.cc $(DIR)/$$problem.cc; \
 	done
 	echo 'PROBLEMS = $(PROBLEMS)' > $(DIR)/Makefile
 	cat Makefile.template >> $(DIR)/Makefile
-
-  
