@@ -2,8 +2,8 @@
 
 all: $(PROBLEMS)
 
-$(PROBLEMS):
-	g++ $@.cc -o $@ 
+$(PROBLEMS): %: %.cc
+	g++ $< -o $@ 
 	./$@
 
 clean:
