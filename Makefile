@@ -20,3 +20,4 @@ endif
 	done
 	echo 'PROBLEMS = $(PROBLEMS)' > $(DIR)/Makefile
 	cat Makefile.template >> $(DIR)/Makefile
+	cd $(DIR) 
