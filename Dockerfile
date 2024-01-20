@@ -8,7 +8,12 @@ RUN apt-get update && apt-get upgrade -y && \
     nodejs \
     npm \
     python3 \
-    python3-pip
+    python3-pip \
+    python3-venv 
+
+# Create a virtual environment for Python and activate it
+RUN python3 -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
 
 # Install atcoder-cli and online-judge-tools
 RUN npm install -g atcoder-cli && \
