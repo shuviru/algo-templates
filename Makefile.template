@@ -3,8 +3,17 @@
 all: $(PROBLEMS)
 
 $(PROBLEMS): %: %.cc
-	g++ -std=c++23 $< -o $@ 
-	./$@
+	g++ -std=c++23 $< -o $@/$@ 
+	cd $@ && pwd &&	oj t -c "./$@" -d ./tests/
+
+P=
+submit: 
+ifndef P
+	$(error P is not set)
+endif
+	cp $(P).cc $(P)/main.cc
+	cd $(P) && acc s main.cc -- --no-open
+
 
 clean:
 	rm -f $(PROBLEMS)
