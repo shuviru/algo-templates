@@ -12,7 +12,7 @@ ifndef P
 	$(error P is not set)
 endif
 	cp $(P).cc $(P)/main.cc
-	cd $(P) && acc s main.cc -- --no-open
+	cd $(P) && acc s main.cc -- --no-open -y
 
 
 clean:
